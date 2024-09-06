@@ -7,7 +7,7 @@
   
   html {
     scroll-behavior: smooth;
-    background-color: #030303;
+    background-color: #000000;
   }
   
   header {
@@ -93,8 +93,10 @@
     padding: 20px 10px;
     min-height: 90vh;
     color: #fff;
-    background: url('img/photorealistic-earth-planet.jpg') no-repeat center center;
+    background-image: linear-gradient(to bottom, transparent 50%, #000000 80%), url('img/photorealistic-earth-planet.jpg');
+    background-repeat:no-repeat;
     background-size: cover;
+    background-position: center;
     background-attachment: fixed;
     width: 100vw;
     position: relative;
