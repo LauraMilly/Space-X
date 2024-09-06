@@ -22,7 +22,7 @@
     z-index: 1000;
   }
   
-  .container {
+  header .container {
     max-width: 1280px;
     width: 90%;
     margin: 0 auto;
@@ -33,7 +33,7 @@
   }
   
   header .container h1 {
-     font-family: "IBM Plex Mono", monospace;
+    font-family: "IBM Plex Mono", monospace;
     font-weight: 100;
     font-style: normal;
     padding: 5px 12px;
@@ -59,6 +59,7 @@
   header nav li a {
     color: #fff;
     text-decoration: none;
+    transition: color 0.3s ease;
   }
   
   header nav li a:hover {
@@ -90,14 +91,13 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    padding: 20px 10px;
-    min-height: 90vh;
+    padding: 20px;
+    height: 100vh;
     color: #fff;
     background-image: linear-gradient(to bottom, transparent 50%, #000000 80%), url('img/photorealistic-earth-planet.jpg');
-    background-repeat:no-repeat;
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     width: 100vw;
     position: relative;
     left: 0;
@@ -106,12 +106,10 @@
     overflow: hidden;
   }
   
-  
   section#home .information {
     max-width: 800px;
-    margin-left: 5%;
-    position: relative;
     z-index: 2;
+    margin-left: 5%;
   }
   
   section#home .information h1 {
@@ -133,91 +131,29 @@
   section#home .btn-start {
     margin-top: 20px;
   }
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+
+
+
+
+
   
   @media (max-width: 1024px) {
     section#home {
-      padding: 20px 10px;
-      height: 50vh;
-    }
-  
-    section#home .information {
-      max-width: 90%;
-      margin-left: 2%;
-    }
-  
-    section#home .information h1 {
-      font-size: 2rem;
-    }
-  
-    section#home .information p {
-      font-size: 1rem;
+      padding: 10px 5px;
+      height: 30vh;
     }
   }
   
   @media (max-width: 768px) {
     section#home {
       padding: 10px 5px;
-      height: 40vh;
-    }
-  
-    section#home .information {
-      max-width: 50%;
-      margin-left: 2%;
-    }
-  
-    section#home .information h1 {
-      font-size: 1.8rem;
-    }
-  
-    section#home .information p {
-      font-size: 0.9rem;
+      height: 30vh;
     }
   }
   
   @media (max-width: 480px) {
     section#home {
       padding: 5px 2px;
-      height: 35vh;
-    }
-  
-    section#home .information {
-      max-width: 100%;
-      margin-left: 2%;
-    }
-  
-    section#home .information h1 {
-      font-size: 1.5rem;
-    }
-  
-    section#home .information p {
-      font-size: 0.8rem;
+      height: 30vh;
     }
   }
