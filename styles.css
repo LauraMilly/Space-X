@@ -63,6 +63,7 @@ header nav li a {
 
 header nav li a:hover {
   text-decoration: underline;
+  text-decoration-color: #07a7e0;
 }
 
 header .btn-start {
@@ -82,7 +83,7 @@ header .btn-start {
 
 .btn-start button:hover {
   color: #ffffff;
-  background-color: #000000;
+  background-color: #07a7e0;
 }
 
 section#home {
@@ -162,8 +163,6 @@ section#about {
   padding-top: 0;
   margin-top: -180px;
   position: relative;
-  height: 220px;
-  
 }
 
 .caixa {
@@ -173,25 +172,30 @@ section#about {
   width: calc(33.333% - 30px); 
   max-width: 300px;
   box-sizing: border-box;
+  
 }
 
 .caixa-1 {
   border-top-left-radius: 8px;
-  border-top: 1px solid #fcfcff; 
-  border-left: 1px solid #fcfcff; 
+  border-top: 1px solid #07a7e0; 
+  border-left: 1px solid #07a7e0;
+  box-shadow: -9px -10px 10px rgba(121, 184, 255, 0.123);
 }
 
 .caixa-2 {
-  border-bottom: 2px solid #fcfcff; 
-  border-right: 2px solid #fcfcff;
+  border-bottom: 1px solid #07a7e0; 
+  border-right: 1px solid #07a7e0;
+  box-shadow: 9px 10px 10px rgba(121, 184, 255, 0.123);
   border-bottom-right-radius: 8px;
 }
 
+
+
 .caixa-3 {
   border-top-right-radius: 8px;
-  border-top: 1px solid #fcfcff; 
-  border-right: 2px solid #fcfcff;
-
+  border-top: 1px solid #07a7e0;
+  border-right: 1px solid #07a7e0;
+  box-shadow: 10px -10px 10px rgba(121, 184, 255, 0.123);
 }
 
 .content {
@@ -199,32 +203,107 @@ section#about {
   text-align: center;
 }
 
-.content h3 {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: #000000;
-}
 
 .content .des {
-  font-size: 0.9rem;
-  color: #666;
+  font-size: 0.8rem;
+  color: #777777;
   margin-bottom: 10px;
+  font-family: "Plus Jakarta Sans", serif;
 }
 
-section#satellite{
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    justify-content: flex-start;
-    background-image: 
-        linear-gradient(to top, transparent 50%, #000000 80%), 
-        linear-gradient(to right, transparent 72%, #000000 100%),
-        url('img/blue-wavy-light-streak-backgroun-esp.jpg'); 
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    margin: 0;
+.icon {
+  font-size: 20px; 
+}
+
+.icon-small {
+  font-size: 15%; 
+}
+
+.icon img {
+  width: 20%;
+  height: auto;
+  
+}
+
+.icon-small img {
+  width: 25%; 
+}
+
+/*sat section*/
+
+
+section#satellite {
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
+  justify-content: flex-start;
+  background-image: 
+      linear-gradient(to top, transparent 50%, #000000 80%), 
+      linear-gradient(to right, transparent 72%, #000000 100%),
+      url('img/blue-wavy-light-streak-backgroun-esp.jpg'); 
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+}
+.Goes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-top: -120px;
+  position: relative; 
+  padding: 0;
+  margin-left: 5%;
+}
+
+
+.cont-sat {
+  border-top: 1px solid #07a7e0; 
+  border-left: 1px solid #07a7e0;
+  box-shadow: -9px -10px 10px rgba(121, 184, 255, 0.123);
+  padding: 30px;
+  margin-top: 10px;
+}
+
+
+section#satellite .Goes h1 {
+  color: #fcfcff;
+  padding-bottom: 30px;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: lighter;
+}
+
+
+section#satellite .Goes .img-st {
+  margin-top: 100px;
+  border-bottom: 1px solid #07a7e0; 
+  border-right: 1px solid #07a7e0;
+  box-shadow: 9px 10px 10px rgba(121, 184, 255, 0.123);
+  padding-left: 30px;
+  padding-bottom: 10px;
+}
+
+
+section#satellite .Goes p {
+  color: #777777;
+  max-width: 400px;
+  font-family: "Plus Jakarta Sans", serif;
+}
+
+
+section#satellite .Goes img {
+  width: 500px;
+}
+
+
+section#satellite .Goes .img-st {
+  border-bottom: 1px solid #07a7e0; 
+  border-right: 1px solid #07a7e0;
+  box-shadow: 9px 10px 10px rgba(121, 184, 255, 0.123);
+  padding-right: 30px;
+  padding-bottom: 20px;
 }
 
 
@@ -264,34 +343,6 @@ section#satellite{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Responsividade */
 @media (max-width: 1024px) {
   section#home {
       padding: 10px 5px;
@@ -311,14 +362,11 @@ section#satellite{
   }
   .container-prod {
     padding: 0 15px;
-    margin-top: -120px; 
+    margin-top: -100px; 
     height: auto; 
   }
-  
-  .caixa {
-    width: calc(50% - 20px); 
-  }
 }
+
 
 @media (max-width: 768px) {
   section#home {
@@ -333,6 +381,8 @@ section#satellite{
   section#home .information p {
       font-size: 0.8rem;
   }
+
+
   .container-prod {
     padding: 0 5px;
     margin-top: -60px; 
@@ -343,8 +393,30 @@ section#satellite{
     width: calc(50% - 20px); 
   }
 
- 
-}
+
+
+    .Goes {
+      flex-direction: column;
+      margin-left: 0;
+      gap: 20px; 
+    }
+  
+    section#satellite .Goes img {
+      width: 100%; 
+      max-width: 100%; 
+    }
+  
+    section#satellite .Goes .img-st {
+      margin-top: 50px; 
+      padding-left: 15px; 
+      padding-bottom: 15px; 
+    }
+  
+    section#satellite .Goes p {
+      max-width: 100%; 
+    }
+  }
+  
 
 @media (max-width: 480px) {
   section#home {
@@ -368,5 +440,15 @@ section#satellite{
 
   .caixa {
     width: 100%; 
+  }
+
+  section#satellite .Goes h1 {
+    font-size: 1.5em; 
+  }
+
+  section#satellite .Goes .img-st {
+    margin-top: 30px;
+    padding-left: 10px;
+    padding-bottom: 10px;
   }
 }
