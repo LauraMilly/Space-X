@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: .3s linear;
 }
 
 html {
@@ -165,38 +166,29 @@ section#about {
   position: relative;
 }
 
+.caixa h3{
+  display: none;
+}
+
 .caixa {
-  background: rgba(0, 0, 0, 0.658);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: #012d3d63;
+  box-shadow: 9px 9px 9px rgba(158, 218, 253, 0.76);
   overflow: hidden;
   width: calc(33.333% - 30px); 
   max-width: 300px;
   box-sizing: border-box;
-  
-}
-
-.caixa-1 {
-  border-top-left-radius: 8px;
-  border-top: 1px solid #07a7e0; 
-  border-left: 1px solid #07a7e0;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(124, 203, 255, 0.1);
   box-shadow: -9px -10px 10px rgba(121, 184, 255, 0.123);
+  border: 1px solid #07a7e0;
 }
 
-.caixa-2 {
-  border-bottom: 1px solid #07a7e0; 
-  border-right: 1px solid #07a7e0;
-  box-shadow: 9px 10px 10px rgba(121, 184, 255, 0.123);
-  border-bottom-right-radius: 8px;
+.caixa:hover{
+  cursor: pointer;
+  border: 2px solid #07a7e0;
+  transform: translateY(-10px);
 }
 
-
-
-.caixa-3 {
-  border-top-right-radius: 8px;
-  border-top: 1px solid #07a7e0;
-  border-right: 1px solid #07a7e0;
-  box-shadow: 10px -10px 10px rgba(121, 184, 255, 0.123);
-}
 
 .content {
   padding: 15px;
@@ -247,12 +239,13 @@ section#satellite {
   height: 100vh;
   margin: 0;
 }
+
 .Goes {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 30px;
-  margin-top: -120px;
+  margin-top: -125px;
   position: relative; 
   padding: 0;
   margin-left: 5%;
@@ -264,20 +257,24 @@ section#satellite {
   border-left: 1px solid #07a7e0;
   box-shadow: -9px -10px 10px rgba(121, 184, 255, 0.123);
   padding: 30px;
-  margin-top: 10px;
 }
 
 
 section#satellite .Goes h1 {
   color: #fcfcff;
-  padding-bottom: 30px;
   font-family: "IBM Plex Mono", monospace;
   font-weight: lighter;
+  padding: 10px;
+  width: 200px;
+  border-top: 1px solid #07a7e0; 
+  border-left: 1px solid #07a7e0;
+  box-shadow: -9px -10px 10px rgba(121, 184, 255, 0.123);
+  height: 50px;
 }
 
 
 section#satellite .Goes .img-st {
-  margin-top: 100px;
+  margin-top: 80px;
   border-bottom: 1px solid #07a7e0; 
   border-right: 1px solid #07a7e0;
   box-shadow: 9px 10px 10px rgba(121, 184, 255, 0.123);
@@ -290,11 +287,13 @@ section#satellite .Goes p {
   color: #777777;
   max-width: 400px;
   font-family: "Plus Jakarta Sans", serif;
+  margin-left: 2%;
 }
 
 
 section#satellite .Goes img {
   width: 500px;
+  border-radius: 30px;
 }
 
 
@@ -305,6 +304,136 @@ section#satellite .Goes .img-st {
   padding-right: 30px;
   padding-bottom: 20px;
 }
+
+section#satellite .btn-more{
+  margin-top: 50px;
+}
+
+.btn-more button{
+  background: #07a7e0;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 200px;
+}
+
+
+/*ast section*/
+ 
+section#astr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 30vh;
+  margin: 0;
+}
+
+section#astr .Goes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  margin-top: -400px;
+  position: relative;
+  padding: 0;
+  margin-left: 5%;
+}
+
+section#astr .cont-sat {
+  border-bottom: 1px solid #07a7e0;
+  border-right: 1px solid #07a7e0;
+  box-shadow: -9px -10px 10px rgba(121, 184, 255, 0.123);
+  padding: 30px;
+  max-width: 400px;
+  position: relative;
+  background-color: #012d3dd5;
+  height: 340px;
+}
+
+section#astr .Goes h1 {
+  color: #ffffff;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: lighter;
+  padding: 10px;
+  width: 200px;
+  border-top: 1px solid #07a7e0;
+  border-left: 1px solid #07a7e0;
+  box-shadow: -9px -10px 10px rgba(121, 184, 255, 0.123);
+  height: 50px;
+}
+
+section#astr .Goes p {
+  color: #d1d1d1;
+  font-family: "Plus Jakarta Sans", serif;
+  margin-left: 2%;
+  margin-top: 2%;
+}
+
+/*footer*/
+
+footer {
+  background-color: #012d3d; 
+  color: #fcfcff; 
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; 
+}
+
+footer p {
+  margin: 0; 
+  font-family: "Arial", sans-serif; 
+  font-size: 16px; 
+}
+
+
+footer p:last-of-type {
+  font-family: "Courier New", monospace; 
+  font-size: 18px; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -365,6 +494,27 @@ section#satellite .Goes .img-st {
     margin-top: -100px; 
     height: auto; 
   }
+
+  section#astr .Goes {
+    flex-direction: column;
+    margin-left: 0;
+  }
+
+  section#astr .Goes img {
+    width: 100%;
+    max-width: none;
+    border-radius: 15px;
+  }
+
+  section#astr .cont-sat {
+    max-width: 90%;
+    height: auto;
+  }
+
+  section#astr .Goes h1 {
+    width: auto;
+    height: auto;
+  }
 }
 
 
@@ -415,6 +565,49 @@ section#satellite .Goes .img-st {
     section#satellite .Goes p {
       max-width: 100%; 
     }
+
+      section#astr .Goes img {
+        width: 100%;
+      }
+    
+      section#astr .cont-sat {
+        max-width: 100%;
+       height: auto;
+      }
+    
+      section#astr {
+        height: 50vh;
+      }
+    
+      section#astr .Goes {
+        gap: 20px;
+        margin-top: -200px;
+      }
+    
+      section#astr .Goes img {
+        width: 100%;
+        border-radius: 10px;
+      }
+    
+      section#astr .cont-sat {
+        padding: 20px;
+        max-width: 100%;
+      }
+    
+      section#astr .Goes h1 {
+        width: auto;
+        height: auto;
+        font-size: 1.2rem;
+      }
+    
+      section#astr .Goes p {
+        margin-left: 0;
+      }
+    
+      section#astr .btn-more button {
+        width: 150px;
+        padding: 8px 16px;
+      }
   }
   
 
@@ -450,5 +643,38 @@ section#satellite .Goes .img-st {
     margin-top: 30px;
     padding-left: 10px;
     padding-bottom: 10px;
+  }
+
+  section#astr {
+    height: auto;
+  }
+
+  section#astr .Goes {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  section#astr .Goes img {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  section#astr .cont-sat {
+    padding: 15px;
+  }
+
+  section#astr .Goes h1 {
+    font-size: 1rem;
+  }
+
+  section#astr .Goes p {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  section#astr .btn-more button {
+    width: 100%;
+    padding: 10px;
   }
 }
